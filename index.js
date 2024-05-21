@@ -32,7 +32,7 @@ app.set('layout extractScripts',true);
 app.use(expressLayout);
 
 // body parser for convert url-encode data to json
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({extended:true}));
 
 //access static file
 app.use(express.static('./assets'))

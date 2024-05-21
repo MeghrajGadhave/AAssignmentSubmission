@@ -4,7 +4,7 @@ require('dotenv').config();
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/ecommerce-digitalflake');
+mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost:8000/digitalflake');
 
 const db = mongoose.connection;
 

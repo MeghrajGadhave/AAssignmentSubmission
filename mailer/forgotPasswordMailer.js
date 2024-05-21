@@ -8,7 +8,7 @@ exports.fogotPasswordLinkMail = (email, accessToken) => {
 
     // send email
     nodemailer.transporter.sendMail({
-        from: process.env.email || 'programming.tushar@gmail.com',
+        from: process.env.email,
         to: email,
         subject: "Reset Password Link",
         html: htmlString

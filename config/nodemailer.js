@@ -6,8 +6,7 @@ require('dotenv').config();
 
 //configration
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    host: "smtp.gmail.com",
+    host: 'smtp.ethereal.email',
     port: 587,
     secure: false, // two factor auth 
     auth: {

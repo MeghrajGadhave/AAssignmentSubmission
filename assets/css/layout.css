@@ -28,3 +28,9 @@ aside li:hover{
 .whiteColor {
     color: white;
 }
+.logo {
+    display: block;
+    width: 120px; 
+    height: auto; 
+    margin: 8px; 
+}
