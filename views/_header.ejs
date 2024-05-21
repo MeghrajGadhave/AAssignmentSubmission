@@ -1,0 +1,27 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand navbar-expand-lg navbar-dark" style="background-color: #000000;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><b>Digital<span style="color: red;">Flake</span></b></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- if user is login -->
+            <% if(locals.user){%>  
+              <li class="nav-item">
+                <a class="nav-link disabled" style="color:rgb(199, 199, 199);" href="#" tabindex="-1" aria-disabled="true">Hello, <%=locals.user.email%></a>
+              </li>
+            <%}%>
+          </ul>
+        <div class="d-flex">
+            <%if(locals.user){%>
+              <a href="/product/create" class="btn btn-outline-light">Add Product</a> &nbsp;&nbsp;  
+              <a href="/category/create" class="btn btn-outline-light">Add Category</a> &nbsp; &nbsp;
+              <a href="/signout" class="btn btn-outline-light">Signout</a> &nbsp;&nbsp;
+
+            <%}else{%>
+                <a href="/signin" class="btn btn-outline-light">Signin</a> &nbsp;&nbsp;
+                <a href="/signup" class="btn btn-outline-light">Signup</a>&nbsp;&nbsp;
+            <%}%>
+        </div>
+      </div>
+    </div>
+  </nav>

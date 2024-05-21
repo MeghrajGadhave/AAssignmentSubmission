@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/css/product.css">
+
+<!-- add product -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-container" style="height: auto; padding-bottom: 20px;">
+                <center><h3 class="heading">Add Product</h3></center><br>
+                <form method="post" url="/product/create" enctype="multipart/form-data" class="row g-3">
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label"></label>
+                    <input type="text" name="name" class="borderNone form-control" id="inputEmail4" placeholder="Product name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label"></label>
+                    <input type="text" name="size" class="borderNone form-control" placeholder="Package size" id="inputPassword4" required>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="inputEmail4" class="form-label"></label>
+                      <input type="number" min="1" name="mrp" placeholder="MRP" class="borderNone form-control" id="inputEmail4" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label"></label>
+                          <select class="borderNone form-select" name="category" aria-label="Default select example" required>
+                              <% for(let category of categorise){%>
+                                  <option value="<%=category.name%>"><%=category.name%></option>
+                              <%}%>
+                          </select> 
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label"></label>
+                      <input type="file" name="img" class="borderNone form-control" id="inputPassword4" required>
+                    </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label"></label>
+                            <select class="borderNone form-select" name="status" aria-label="Default select example" required>
+                              <option value="Active">Active</option>
+                              <option value="Active">Inactive</option>
+                          </select> 
+                      </div>
+                  <div class="col-12">
+                    <button id="btnSubmit" type="submit" class="btn btn-dark btn-outline-warning">Add Product</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

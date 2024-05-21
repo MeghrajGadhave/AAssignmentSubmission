@@ -1,0 +1,30 @@
+#main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainContainer aside {
+    width: 20%;
+    height: 90vh;
+    background-color: gray;
+}
+
+aside li:hover{
+    background-color: lightsalmon;
+    color:white
+}
+
+#bodyContainer {
+    width: 80%;
+    height: 90vh;
+    overflow: auto;
+    /* overflow-x: auto; */
+    background-color: whitesmoke;
+}
+
+/* commen css */
+.whiteColor {
+    color: white;
+}

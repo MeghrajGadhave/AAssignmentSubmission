@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/commen.css">
+
+<!-- add category -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-container" style="height: auto; padding-bottom: 20px;">
+                <h3 class="heading">Add Category</h3><br>
+                <form action="<%=url%>" method="post">
+                    <input type="text" class="form-control" name="name" placeholder="Category Name" required><br>
+                    <input type="text" class="form-control" name="discription" placeholder="Add discription" required><br>
+                    <select class="form-select" name="status" aria-label="Default select example" required>
+                        <option value="Active" selected>Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>    
+                    <br><br>
+                   <input type="submit" id="btnSubmit" class=" btn btn-dark btn-outline-warning"
+                                value="Add Category">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

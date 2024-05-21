@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/product.css">
+
+<!-- heading -->
+<div id="heading" >
+    <h4>
+        <img src="https://cdn.iconscout.com/icon/free/png-32/free-product-gift-wrapping-birthday-present-box-package-1-9597.png?f=avif&w=512" alt="">
+        <b>Category</b> 
+    </h4>
+   <div>
+        <a href="/category/create"><img src="https://cdn.iconscout.com/icon/free/png-64/free-add-new-1439785-1214356.png?f=avif&w=512" alt=""></a>
+   </div>
+</div>
+
+<!-- table -->
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Discription</th>
+            <th scope="col">Status</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            <%let count=1%>
+          <% for(category of categorise){%>
+            <tr>
+                <th scope="row"><%=count%></th>
+                <td><%=category.name%></td>
+                <td><%=category.discription%></td>
+                <td><div id="status" <% if(category.status=="Active"){%>style="background-color:green"<%}%> ><b><%=category.status%></b></div></td>
+                <td><a href="/category/update-status?id=<%=category._id%>&status=<%=category.status%>"><img src="https://cdn.iconscout.com/icon/free/png-16/free-edit-3351803-2791551.png?f=avif&w=512"></a></td>
+                <td><a href="/category/delete?id=<%=category._id%>"><img src="https://cdn.iconscout.com/icon/free/png-32/free-delete-2902143-2411575.png?f=avif&w=512" alt=""></a></td>
+            </tr>
+          <% count++; } %>
+        </tbody>
+      </table>
+</div>

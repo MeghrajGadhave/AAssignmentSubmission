@@ -1,0 +1,15 @@
+.form-container{
+    height: auto;
+}
+.forgot-container{
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+.forgot-container>a{
+    font-size: large;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}

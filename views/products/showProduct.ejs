@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/product.css">
+
+<!-- heading -->
+<div id="heading" >    
+    <h4>
+        <img src="https://cdn.iconscout.com/icon/free/png-32/free-product-gift-wrapping-birthday-present-box-package-1-9597.png?f=avif&w=512" alt="">
+        <b>Products</b> 
+    </h4>
+   <div>
+        <a href="/product/create"><img src="https://cdn.iconscout.com/icon/free/png-64/free-add-new-1439785-1214356.png?f=avif&w=512" alt=""></a>
+   </div>
+</div>
+
+<!-- table -->
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Package Size</th>
+            <th scope="col">Category</th>
+            <th scope="col">MRP</th>
+            <th scope="col">Image</th>
+            <th scope="col">Status</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            <%let count=1%>
+          <% for(product of products){%>
+            <tr>
+                <th scope="row"><%=count%></th>
+                <td><%=product.name%></td>
+                <td><%=product.size%></td>
+                <td><%=product.category%></td>
+                <td><%=product.mrp%></td>
+                <td><img width="50" height="50" src="<%=product.img%>" alt=""></td>
+                <td><div id="status" <% if(product.status=="Active"){%>style="background-color:green"<%}%> ><b><%=product.status%></b></div></td>
+                <td><a href="/product/update-status?id=<%=product._id%>&status=<%=product.status%>"><img src="https://cdn.iconscout.com/icon/free/png-16/free-edit-3351803-2791551.png?f=avif&w=512"></a></td>
+                <td><a href="/product/delete?id=<%=product._id%>"><img src="https://cdn.iconscout.com/icon/free/png-32/free-delete-2902143-2411575.png?f=avif&w=512" alt=""></a></td>
+            </tr>
+          <% count++; } %>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/commen.css">
+<link rel="stylesheet" href="/css/signin.css">
+<!-- sign in -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-container">
+                <h3 class="heading">Sign In</h3><br>
+                <form action="<%=url%>" method="post">
+                    <input type="email" class="form-control" name="email" placeholder="Email" required><br>
+                    <input type="password" class="form-control" name="password" placeholder="password" required><br><br>
+                    <input type="submit" id="btnSubmit" class="btn btn-dark btn-outline-warning" value="signin">
+                </form>
+                <div class="forgot-container">
+                    <a href="/forgot-password" class="">Forgot Password</a>
+                    <a href="/signup" class="">Signup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
